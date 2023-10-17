@@ -20,6 +20,12 @@
                     <th>ms</th>
                 </tr>
                 <tr>
+                    <td><a href="https://www.speedtest.net/result/15386036532" target="_blank">10/16/2023 9:35 PM</a></td>
+                    <td>9.43</td>
+                    <td>9.33</td>
+                    <td>8ms</td>
+                </tr>
+                <tr>
                     <td><a href="http://www.speedtest.net/result/15388227825" target="_blank">10/17/2023 10:06 AM</a></td>
                     <td>1.15</td>
                     <td>9.35</td>
@@ -82,21 +88,21 @@
     <script>
         // Dados para os gráficos de linha
         const data = {
-            labels: ["10/17/2023 10:06 AM", "10/17/2023 10:11 AM", "10/17/2023 10:29 AM"],
+            labels: ["10/16/2023 9:35 PM", "10/17/2023 10:06 AM", "10/17/2023 10:11 AM", "10/17/2023 10:29 AM"],
             datasets: [
                 {
                     label: "Download Mbps",
-                    data: [1.15, 3.99, 1.41],
+                    data: [9.43, 1.15, 3.99, 1.41],
                     backgroundColor: "rgba(75, 192, 192, 0.6)",
                 },
                 {
                     label: "Upload Mbps",
-                    data: [9.35, 9.74, 0.89],
+                    data: [9.33, 9.35, 9.74, 0.89],
                     backgroundColor: "rgba(255, 99, 132, 0.6)",
                 },
                 {
                     label: "ms",
-                    data: [15, 180, 234],
+                    data: [8, 15, 180, 234],
                     backgroundColor: "rgba(54, 162, 235, 0.6)",
                 }
             ]
@@ -118,25 +124,25 @@
             },
         });
         const lineData = {
-            labels: ["10/17/2023 10:06 AM", "10/17/2023 10:11 AM", "10/17/2023 10:29 AM"],
+            labels: ["10/16/2023 9:35 PM", "10/17/2023 10:06 AM", "10/17/2023 10:11 AM", "10/17/2023 10:29 AM"],
             datasets: [
                 {
                     label: "Download Mbps",
-                    data: [1.15, 3.99, 1.41],
+                    data: [9.43, 1.15, 3.99, 1.41],
                     borderColor: "rgba(75, 192, 192, 1)",
                     borderWidth: 2,
                     fill: false,
                 },
                 {
                     label: "Upload Mbps",
-                    data: [9.35, 9.74, 0.89],
+                    data: [9.33, 9.35, 9.74, 0.89],
                     borderColor: "rgba(255, 99, 132, 1)",
                     borderWidth: 2,
                     fill: false,
                 },
                 {
                     label: "Latência (ms)",
-                    data: [15, 180, 234],
+                    data: [8, 15, 180, 234],
                     borderColor: "rgba(54, 162, 235, 1)",
                     borderWidth: 2,
                     fill: false,
