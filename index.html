@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fixanet-Casa</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="shortcut icon" href="icone.png" type="image/x-icon">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Speedtest Fixanet-Casa</h1>
+        <p class="subtitle">Testes de velocidade de internet, realizados na plataforma Speedtest By Ookla, na rede da FixaNet.</p>
+
+        <div class="content">
+            <table class="data-table">
+                <tr>
+                    <th>Links</th>
+                    <th>Download Mbps</th>
+                    <th>Upload Mbps</th>
+                    <th>ms</th>
+                </tr>
+                <tr>
+                    <td><a href="http://www.speedtest.net/result/15388227825" target="_blank">10/17/2023 10:06 AM</a></td>
+                    <td>1.15</td>
+                    <td>9.35</td>
+                    <td>15ms</td>
+                </tr>
+                <tr>
+                    <td><a href="http://www.speedtest.net/result/15388247160" target="_blank">10/17/2023 10:11 AM</a></td>
+                    <td>3.99</td>
+                    <td>9.74</td>
+                    <td>180ms</td>
+                </tr>
+                <tr>
+                    <td><a href="https://www.speedtest.net/result/15388326155" target="_blank">10/17/2023 10:29 AM</a></td>
+                    <td>1.41</td>
+                    <td>0.89</td>
+                    <td>234ms</td>
+                </tr>
+                
+            </table>
+
+            <div class="chart-container">
+                <canvas id="speedChart" class="chart"></canvas>
+            </div>
+        </div>
+
+        <!-- Gráficos de Linha -->
+        <div class="line-chart-container">
+            <canvas id="speedChart" class="chart"></canvas>
+            <canvas id="downloadLineChart" class="line-chart"></canvas>
+        </div>
+
+        <!-- Tabela de valores referenciais -->
+        <div class="reference-table">
+            <h2>Valores de Referência</h2>
+            <table>
+                <tr>
+                    <th>Métrica</th>
+                    <th>Valor Esperado</th>
+                </tr>
+                <tr>
+                    <td>Download Mbps</td>
+                    <td>Maior que 85 e menor ou igual a 100 Mbps</td>
+                </tr>
+                <tr>
+                    <td>Upload Mbps</td>
+                    <td>Maior que 85 e menor ou igual a 100 Mbps</td>
+                </tr>
+                <tr>
+                    <td>Latência (ms)</td>
+                    <td>Menos de 20 ms</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 - Made by Victor ❤️💻</p>
+    </footer>
+
+    <script>
+        // Dados para os gráficos de linha
+        const data = {
+            labels: ["10/17/2023 10:06 AM", "10/17/2023 10:11 AM", "10/17/2023 10:29 AM"],
+            datasets: [
+                {
+                    label: "Download Mbps",
+                    data: [1.15, 3.99, 1.41],
+                    backgroundColor: "rgba(75, 192, 192, 0.6)",
+                },
+                {
+                    label: "Upload Mbps",
+                    data: [9.35, 9.74, 0.89],
+                    backgroundColor: "rgba(255, 99, 132, 0.6)",
+                },
+                {
+                    label: "ms",
+                    data: [15, 180, 234],
+                    backgroundColor: "rgba(54, 162, 235, 0.6)",
+                }
+            ]
+        };
+
+        const speedChart = new Chart(document.getElementById('speedChart'), {
+            type: 'bar',
+            data: data,
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        suggestedMax: 10,
+                    },
+                    x: {
+                        stacked: true,
+                    },
+                },
+            },
+        });
+        const lineData = {
+            labels: ["10/17/2023 10:06 AM", "10/17/2023 10:11 AM", "10/17/2023 10:29 AM"],
+            datasets: [
+                {
+                    label: "Download Mbps",
+                    data: [1.15, 3.99, 1.41],
+                    borderColor: "rgba(75, 192, 192, 1)",
+                    borderWidth: 2,
+                    fill: false,
+                },
+                {
+                    label: "Upload Mbps",
+                    data: [9.35, 9.74, 0.89],
+                    borderColor: "rgba(255, 99, 132, 1)",
+                    borderWidth: 2,
+                    fill: false,
+                },
+                {
+                    label: "Latência (ms)",
+                    data: [15, 180, 234],
+                    borderColor: "rgba(54, 162, 235, 1)",
+                    borderWidth: 2,
+                    fill: false,
+                }
+            ]
+        };
+
+        const downloadLineChart = new Chart(document.getElementById('downloadLineChart'), {
+            type: 'line',
+            data: lineData,
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        suggestedMax: 10,
+                    },
+                },
+            },
+        });
+
+        
+    </script>
+</body>
+</html>

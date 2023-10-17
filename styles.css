@@ -1,0 +1,124 @@
+/* Works on Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #000000 #444;
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+    background: #444;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #000000;
+    border-radius: 20px;
+    border: 3px solid #444;
+}
+
+body {
+    background-color: #131313;
+    color: #FFFFFF;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    margin: 20px;
+}
+
+.title {
+    font-size: 28px;
+    padding: 10px;
+    background-color: #333;
+    border-radius: 3px;
+}
+
+.subtitle {
+    font-size: 16px;
+    padding: 10px;
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.data-table {
+    width: 49%;
+    border-radius: 8px;
+    background-color: #272727;
+}
+
+.data-table th {
+    background-color: #1A1A1A;
+    border-radius: 8px;
+}
+
+.data-table th, .data-table td {
+    padding: 10px;
+    border: 1px solid #333;
+    border-radius: 8px;
+}
+
+.data-table td:first-child a {
+    color: #00a1ff;
+    text-decoration: none;
+}
+
+.data-table td:first-child a:hover {
+    text-decoration: underline;
+}
+
+.chart-container {
+    width: 49%;
+    background-color: #333;
+    border: 1px solid #1A1A1A;
+    margin-top: 0px;
+    border-radius: 8px;
+}
+
+.reference-table {
+    background-color: #333;
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.reference-table h2 {
+    font-size: 20px;
+    background-color: #1A1A1A;
+    padding-block: 10px;
+    border-radius: 3px;
+    margin-top: -5px;
+}
+
+.reference-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.reference-table th, .reference-table td {
+    padding: 10px;
+    border: 1px solid #1A1A1A;
+}
+
+.line-chart-container {
+    justify-content: space-between;
+    width: 100%;
+    margin-top: -130px;
+}
+
+.line-chart {
+
+    background-color: #333;
+    border: 1px solid #1A1A1A;
+    border-radius: 8px;
+
+}
